@@ -1,0 +1,10 @@
+.card{
+	border:1px solid black;
+	text-align: center;
+}
+.card:hover{
+	ms-transform: rotateY(180deg); /* IE 9 */
+    -webkit-transform: rotateY(180deg); /* Chrome, Safari, Opera */
+    transform: rotateY(180deg);
+	transition: 300ms linear all;
+}
