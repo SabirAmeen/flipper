@@ -1,10 +1,47 @@
-.card{
-	border:1px solid black;
-	text-align: center;
+.card-wrap {
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    border: 1px solid;
 }
-.card:hover{
-	ms-transform: rotateY(180deg); /* IE 9 */
-    -webkit-transform: rotateY(180deg); /* Chrome, Safari, Opera */
-    transform: rotateY(180deg);
-	transition: 300ms linear all;
+.card-wrap:hover{
+	/*transform: rotateY(180deg);
+	transition: 300ms ease all;*/
+}
+
+.card {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	transform: rotate3d(0, 1, 0, 180deg);
+}
+
+@keyframes flipShow {
+	0% {
+		transform: rotate3d(0, 1, 0, 180deg);
+	}
+
+	100% {
+		transform: rotate3d(0, 1, 0, 0deg);
+	}
+}
+
+@keyframes flipHide {
+	0% {
+		transform: rotate3d(0, 1, 0, 0deg);
+	}
+
+	100% {
+		transform: rotate3d(0, 1, 0, 180deg);
+	}
+}
+
+.flip-show {
+	animation: flipShow 0.5s ease both;
+}
+
+.flip-hide {
+	animation: flipHide 0.5s ease both;
 }
