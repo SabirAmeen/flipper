@@ -67,9 +67,6 @@ export default class extends React.Component{
 
 		this.flip = this.flip.bind(this);
 	}
-	componentDidMount() {
-		
-	}
 	flip(flipIndex) {
 		const { list, lastIndex } = this.state;
 		let indexItem = list[flipIndex];
@@ -128,7 +125,7 @@ export default class extends React.Component{
 					})
 				}
 			}
-		}.bind(this),1000)
+		}.bind(this),500)
 		
 	
 		
@@ -144,7 +141,7 @@ export default class extends React.Component{
 					{
 						list.map((item, index) => {
 							return (
-								<div className="card-wrap w3-panel w3-card-8 w3-hover-shadow"
+								<div className="card-wrap"
 									key={ item.key }
 								>
 									<div onClick={() => this.flip(index)}
